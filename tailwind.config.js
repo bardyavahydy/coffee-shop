@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./**/*.html"],
+  darkMode: 'selector',
   theme: {
     extend: {
       fontFamily:{
@@ -24,9 +25,20 @@ module.exports = {
       },
       borderRadius: {
         '4xl': '2rem'
-      }
+      },
+      size: {
+        '8.5': '2.125rem',
+      },
+      letterSpacing:{
+        tightest: '-.065em',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    function({ addVariant }) {
+      addVariant('child', '& > *')
+      addVariant('grandchild', '& > * > *')
+    }
+  ],
 }
 
