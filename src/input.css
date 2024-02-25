@@ -5,38 +5,38 @@
 @layer base{
     @font-face {
         font-family: "danaRegular";/* 400 */
-        src: local("danaRegular"), url("../public/fonts/Dana/woff2/DanaFaNum-Regular.woff2") format("woff2");
+        src: url("../public/fonts/Dana/woff2/DanaFaNum-Regular.woff2") format("woff2");
         font-display: swap;
     }
 
     @font-face {
         font-family: "danaMedium";/* 500 */
-        src: local("danaMedium"), url("../public/fonts/Dana/woff2/DanaFaNum-Medium.woff2") format("woff2");
+        src: url("../public/fonts/Dana/woff2/DanaFaNum-Medium.woff2") format("woff2");
         font-display: swap;
     }
 
     @font-face {
         font-family: "danaBold";/* 600 */
-        src: local("danaBold"), url("../public/fonts/Dana/woff2/DanaFaNum-DemiBold.woff2") format("woff2");
+        src: url("../public/fonts/Dana/woff2/DanaFaNum-DemiBold.woff2") format("woff2");
         font-display: swap;
     }
 
 
     @font-face {
         font-family: "morabbaLight";/* 00 */
-        src: local("morabbaLight"), url("../public/fonts/Morabba/woff2/Morabba-Light.woff2") format("woff2");
+        src: url("../public/fonts/Morabba/woff2/Morabba-Light.woff2") format("woff2");
         font-display: swap;
     }
 
     @font-face {
         font-family: "morabbaMedium";/* 00 */
-        src: local("morabbaMedium"), url("../public/fonts/Morabba/woff2/Morabba-Medium.woff2") format("woff2");
+        src: url("../public/fonts/Morabba/woff2/Morabba-Medium.woff2") format("woff2");
         font-display: swap;
     }
 
     @font-face {
         font-family: "morabbaBold";/* 00 */
-        src: local("morabbaBold"), url("../public/fonts/Morabba/woff2/Morabba-Bold.woff2") format("woff2");
+        src: url("../public/fonts/Morabba/woff2/Morabba-Bold.woff2") format("woff2");
         font-display: swap;
     }
 
