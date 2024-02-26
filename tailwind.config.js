@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./**/*.html"],
+  content: ["./**/*.{html,js}"],
   darkMode: 'selector',
   theme: {
     extend: {
@@ -32,6 +32,12 @@ module.exports = {
       letterSpacing:{
         tightest: '-.065em',
       },
+      transitionProperty: {
+        'height': 'height',
+        'right': 'right',
+        'left': 'left',
+      }
+
     },
   },
   plugins: [
