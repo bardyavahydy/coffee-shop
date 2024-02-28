@@ -8,6 +8,9 @@ const crossMenuElm = $.querySelector('.cross-menu')
 const storeChevronBtnElm = $.querySelector('.store-chevron-btn')
 const storeChevronSvgElm = storeChevronBtnElm.querySelector('svg')
 const subMenuMobileElm = $.querySelector('.sub-menu-mobile')
+const shoppingCartSvgMobileElm = $.querySelector('.shopping-cart-svg-mobile')
+const shoppingCartMobileElm = $.querySelector('.shopping-cart-mobile')
+const crossShoppingCartMobileElm = $.querySelector('.cross-shopping-cart-mobile')
 
 let theme = null
 
@@ -66,25 +69,29 @@ const settingClassesForMenuOrShoppingCart = (elm, initialCoordinatesX, secondary
     elm.classList.add(secondaryCoordinatesX)
 }
 
-const showMobileMenuOrSoppingCart = (elm) =>{
+const showMobileMenuOrSoppingCart = (elm, initialCoordinatesX, secondaryCoordinatesX) =>{
     settingClassesForOverlayElm('opacity-0', 'invisible', 'opacity-100','visible')
-    setTimeout(() => settingClassesForMenuOrShoppingCart(elm, '-right-64', 'right-0'), 250);
+    setTimeout(() => settingClassesForMenuOrShoppingCart(elm, initialCoordinatesX, secondaryCoordinatesX), 250);
 }
 
-const hideMobileMenuOrSoppingCart = (elm) =>{
-    settingClassesForMenuOrShoppingCart(elm, 'right-0', '-right-64')
+const hideMobileMenuOrSoppingCart = (elm, initialCoordinatesX, secondaryCoordinatesX) =>{
+    settingClassesForMenuOrShoppingCart(elm, initialCoordinatesX, secondaryCoordinatesX)
     setTimeout(() => settingClassesForOverlayElm('opacity-100', 'visible', 'opacity-0','invisible'), 250);
 }
 
 // EVENTS
 
-menuHamburgerElm.addEventListener('click', () => showMobileMenuOrSoppingCart(mobileMenuElm))
+menuHamburgerElm.addEventListener('click', () => showMobileMenuOrSoppingCart(mobileMenuElm, '-right-64', 'right-0'))
+
+shoppingCartSvgMobileElm.addEventListener('click', () => showMobileMenuOrSoppingCart(shoppingCartMobileElm, '-left-64', 'left-0'))
 
 overlayElm.addEventListener('click', () =>{
-    if(mobileMenuElm.classList.contains('right-0')) hideMobileMenuOrSoppingCart(mobileMenuElm)
+    if(mobileMenuElm.classList.contains('right-0')) hideMobileMenuOrSoppingCart(mobileMenuElm, 'right-0', '-right-64')
+    else hideMobileMenuOrSoppingCart(shoppingCartMobileElm, 'left-0', '-left-64')
 })
 
-crossMenuElm.addEventListener('click', () => hideMobileMenuOrSoppingCart(mobileMenuElm))
+crossMenuElm.addEventListener('click', () => hideMobileMenuOrSoppingCart(mobileMenuElm, 'right-0', '-right-64'))
+crossShoppingCartMobileElm.addEventListener('click', () => hideMobileMenuOrSoppingCart(shoppingCartMobileElm, 'left-0', '-left-64'))
 
 themeBtnElms.forEach(themeBtnElm => {
     themeBtnElm.addEventListener('click', setTheme)
