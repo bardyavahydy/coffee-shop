@@ -722,6 +722,10 @@ body{
   bottom: 0px;
 }
 
+.-left-64 {
+  left: -16rem;
+}
+
 .-right-64 {
   right: -16rem;
 }
@@ -827,12 +831,24 @@ body{
   margin-right: 1.25rem;
 }
 
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
+.mb-1\.5 {
+  margin-bottom: 0.375rem;
+}
+
 .mb-6 {
   margin-bottom: 1.5rem;
 }
 
 .mb-8 {
   margin-bottom: 2rem;
+}
+
+.ml-1 {
+  margin-left: 0.25rem;
 }
 
 .ml-2 {
@@ -867,12 +883,8 @@ body{
   margin-top: 1.25rem;
 }
 
-.mb-3 {
-  margin-bottom: 0.75rem;
-}
-
-.mb-3\.5 {
-  margin-bottom: 0.875rem;
+.mt-auto {
+  margin-top: auto;
 }
 
 .box-border {
@@ -1011,6 +1023,11 @@ body{
   height: 120px;
 }
 
+.size-\[90px\] {
+  width: 90px;
+  height: 90px;
+}
+
 .size-full {
   width: 100%;
   height: 100%;
@@ -1040,12 +1057,16 @@ body{
   height: 100%;
 }
 
+.max-h-96 {
+  max-height: 24rem;
+}
+
 .max-h-\[354px\] {
   max-height: 354px;
 }
 
-.max-h-96 {
-  max-height: 24rem;
+.max-h-\[82\%\] {
+  max-height: 82%;
 }
 
 .w-52 {
@@ -2140,6 +2161,11 @@ body{
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
 }
 
+.border-gray-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity));
+}
+
 .border-white\/20 {
   border-color: rgb(255 255 255 / 0.2);
 }
@@ -2326,6 +2352,11 @@ body{
   padding-right: 1rem;
 }
 
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
 .px-7 {
   padding-left: 1.75rem;
   padding-right: 1.75rem;
@@ -2361,6 +2392,14 @@ body{
   padding-bottom: 1.5rem;
 }
 
+.pb-5 {
+  padding-bottom: 1.25rem;
+}
+
+.pb-8 {
+  padding-bottom: 2rem;
+}
+
 .pl-4 {
   padding-left: 1rem;
 }
@@ -2383,14 +2422,6 @@ body{
 
 .pt-5 {
   padding-top: 1.25rem;
-}
-
-.pr-8 {
-  padding-right: 2rem;
-}
-
-.pr-7 {
-  padding-right: 1.75rem;
 }
 
 .text-left {
@@ -2600,14 +2631,14 @@ body{
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-zinc-700 {
-  --tw-text-opacity: 1;
-  color: rgb(63 63 70 / var(--tw-text-opacity));
-}
-
 .text-zinc-600 {
   --tw-text-opacity: 1;
   color: rgb(82 82 91 / var(--tw-text-opacity));
+}
+
+.text-zinc-700 {
+  --tw-text-opacity: 1;
+  color: rgb(63 63 70 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -2948,6 +2979,12 @@ body{
   transition-duration: 150ms;
 }
 
+.transition-left {
+  transition-property: left;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .transition-right {
   transition-property: right;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -3099,6 +3136,20 @@ body{
        column-gap: 0.5rem;
 }
 
+.child\:border-b > * {
+  border-bottom-width: 1px;
+}
+
+.child\:border-b-gray-100 > * {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(243 244 246 / var(--tw-border-opacity));
+}
+
+.child\:py-5 > * {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
 .child\:py-6 > * {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -3126,11 +3177,6 @@ body{
 .child\:before\:inline-block > *::before {
   content: var(--tw-content);
   display: inline-block;
-}
-
-.child\:before\:flex > *::before {
-  content: var(--tw-content);
-  display: flex;
 }
 
 .child\:before\:size-1 > *::before {
@@ -3165,16 +3211,6 @@ body{
 .child\:before\:duration-300 > *::before {
   content: var(--tw-content);
   transition-duration: 300ms;
-}
-
-.hover\:child\:child\:-translate-x-1 > * > *:hover {
-  --tw-translate-x: -0.25rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.hover\:child\:child\:-translate-x-1\.5 > * > *:hover {
-  --tw-translate-x: -0.375rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .hover\:child\:child\:-translate-x-2 > * > *:hover {
@@ -3415,6 +3451,10 @@ body{
 .dark\:hover\:bg-emerald-600:hover:where(.dark, .dark *) {
   --tw-bg-opacity: 1;
   background-color: rgb(5 150 105 / var(--tw-bg-opacity));
+}
+
+.dark\:child\:border-b-white\/10 > *:where(.dark, .dark *) {
+  border-bottom-color: rgb(255 255 255 / 0.1);
 }
 
 @media (min-width: 1024px) {
