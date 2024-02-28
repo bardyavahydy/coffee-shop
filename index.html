@@ -191,8 +191,8 @@
                                             <div class="shrink-0 size-[120px] ml-2.5">
                                                 <img src="./public/imgs/products/p1.png" alt="p1" class="size-full" loading="lazy">
                                             </div>
-                                            <div>
-                                                <h3 class="font-danaMedium text-zinc-700 dark:text-white text-base mb-6 line-clamp-2">قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی</h3>
+                                            <div class="text-zinc-700 dark:text-white">
+                                                <h3 class="font-danaMedium text-base mb-6 line-clamp-2">قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی</h3>
                                                 <div>
                                                     <span class="font-danaMedium text-teal-600 dark:text-emerald-500 text-xs tracking-tighter">14,500 تومان تخفیف</span>
                                                     <p class="text-sm text-zinc-700 dark:text-white"><span class="font-danaBold text-lg">175,000</span> تومان</p>
@@ -204,8 +204,8 @@
                                             <div class="shrink-0 size-[120px] ml-2.5">
                                                 <img src="./public/imgs/products/p2.png" alt="p2" class="size-full" loading="lazy">
                                             </div>
-                                            <div>
-                                                <h3 class="font-danaMedium text-zinc-700 dark:text-white text-base mb-6 line-clamp-2">قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی</h3>
+                                            <div class="text-zinc-700 dark:text-white">
+                                                <h3 class="font-danaMedium text-base mb-6 line-clamp-2">قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی</h3>
                                                 <div>
                                                     <span class="font-danaMedium text-teal-600 dark:text-emerald-500 text-xs tracking-tighter">14,500 تومان تخفیف</span>
                                                     <p class="text-sm text-zinc-700 dark:text-white"><span class="font-danaBold text-lg">175,000</span> تومان</p>
@@ -217,8 +217,8 @@
                                             <div class="shrink-0 size-[120px] ml-2.5">
                                                 <img src="./public/imgs/products/p3.png" alt="p3" class="size-full" loading="lazy">
                                             </div>
-                                            <div>
-                                                <h3 class="font-danaMedium text-zinc-700 dark:text-white text-base mb-6 line-clamp-2">قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی</h3>
+                                            <div class="text-zinc-700 dark:text-white">
+                                                <h3 class="font-danaMedium text-base mb-6 line-clamp-2">قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی</h3>
                                                 <div>
                                                     <span class="font-danaMedium text-teal-600 dark:text-emerald-500 text-xs tracking-tighter">14,500 تومان تخفیف</span>
                                                     <p class="text-sm text-zinc-700 dark:text-white"><span class="font-danaBold text-lg">175,000</span> تومان</p>
@@ -302,6 +302,8 @@
     <header class="header-mobile bg-white dark:bg-zinc-700 text-zinc-700 dark:text-white py-3 px-4 md:hidden">
         <!-- menu hamburger & logo & mobile shopping cart -->
         <nav class="mobile-nav flex items-center justify-between">
+            <!-- overlay -->
+            <div class="overlay fixed inset-0 bg-black/40 z-10 opacity-0 invisible transition-all duration-300"></div>
 
             <!-- menu hamburger & mobile menu -->
             <div>
@@ -311,9 +313,6 @@
                         <use href="#bars-3-svg"></use>
                     </svg>
                 </div>
-
-                <!-- overlay -->
-                <div class="overlay fixed inset-0 bg-black/40 z-10 opacity-0 invisible transition-all duration-300"></div>
 
                 <!-- mobile menu -->
                 <div class="mobile-menu bg-white dark:bg-zinc-700 fixed inset-y-0 -right-64 z-20 w-64 pt-3 px-4 transition-right duration-300">
@@ -447,15 +446,83 @@
             <!-- shopping cart svg & shopping cart box -->
             <div>
                 <!-- shopping cart svg -->
-                <div>
+                <div class="shopping-cart-svg-mobile">
                     <svg class="size-6">
                         <use href="#shopping-cart-svg"></use>
                     </svg>
                 </div>
 
                 <!-- shopping cart box -->
-                <div>
+                <div class="shopping-cart-mobile bg-white dark:bg-zinc-700 fixed inset-y-0 -left-64 z-20 w-64 px-4 pt-5 transition-left duration-300">
+                    <div class="flex flex-col h-full">
+                        <!-- cart header & cart body -->
+                        <div class="max-h-[82%]">
+                            <!-- cart header -->
+                            <div class="font-danaMedium flex items-center justify-between pb-5 border-b border-gray-300 dark:border-y-white/10">
+                                <div class="cross-shopping-cart-mobile">
+                                    <svg class="size-5">
+                                        <use href="#x-mark-svg"></use>
+                                    </svg>
+                                </div>
+                                <h4>سبد خرید</h4>
+                            </div>
+    
+                            <!-- cart body -->
+                            <div class="h-full overflow-y-scroll child:flex child:border-b child:border-b-gray-100 dark:child:border-b-white/10 child:py-5">
+                                <!-- cart -->
+                                <div>
+                                    <div class="shrink-0 size-[90px] ml-1">
+                                        <img src="./public/imgs/products/p1.png" alt="p1" class="size-full" loading="lazy">
+                                    </div>
+                                    <div class="text-zinc-700 dark:text-white">
+                                        <h3 class="font-danaMedium text-sm mb-1.5 line-clamp-2">قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی</h3>
+                                        <div>
+                                            <span class="font-danaMedium text-teal-600 dark:text-emerald-500 text-xs tracking-tighter">14,500 تومان تخفیف</span>
+                                            <p class="text-xs"><span class="font-danaBold text-base">175,000</span> تومان</p>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div>
+                                    <div class="shrink-0 size-[90px] ml-1">
+                                        <img src="./public/imgs/products/p2.png" alt="p2" class="size-full" loading="lazy">
+                                    </div>
+                                    <div class="text-zinc-700 dark:text-white">
+                                        <h3 class="font-danaMedium text-sm mb-1.5 line-clamp-2">قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی</h3>
+                                        <div>
+                                            <span class="font-danaMedium text-teal-600 dark:text-emerald-500 text-xs tracking-tighter">14,500 تومان تخفیف</span>
+                                            <p class="text-sm"><span class="font-danaBold text-base">175,000</span> تومان</p>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div>
+                                    <div class="shrink-0 size-[90px] ml-1">
+                                        <img src="./public/imgs/products/p3.png" alt="p3" class="size-full" loading="lazy">
+                                    </div>
+                                    <div class="text-zinc-700 dark:text-white">
+                                        <h3 class="font-danaMedium text-sm mb-1.5 line-clamp-2">قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی</h3>
+                                        <div>
+                                            <span class="font-danaMedium text-teal-600 dark:text-emerald-500 text-xs tracking-tighter">14,500 تومان تخفیف</span>
+                                            <p class="text-sm"><span class="font-danaBold text-base">175,000</span> تومان</p>
+                                        </div>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
 
+                        <!-- cart footer -->
+                        <div class="bg-white dark:bg-zinc-700 flex justify-between items-end mt-auto pt-5 pb-8 border-t border-t-gray-300 dark:border-t-white/10">
+                            <!-- order -->
+                            <a href="#" class="bg-teal-600 dark:bg-emerald-500 text-white tracking-tightest py-2.5 px-5 rounded-xl">ثبت سفارش</a>
+
+                            <!-- price -->
+                            <div class="flex flex-col">
+                                <span class="font-danaMedium text-gray-300 text-xs tracking-tighter">مبلغ قابل پرداخت</span>
+                                <span class="text-xs text-zinc-700 dark:text-white"><span class="font-danaBold text-sm">350,000</span> تومان</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
