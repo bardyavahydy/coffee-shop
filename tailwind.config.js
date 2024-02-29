@@ -4,6 +4,13 @@ module.exports = {
   darkMode: 'selector',
   theme: {
     extend: {
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: '1rem',
+          xl: '0.625rem'
+        }
+      },
       fontFamily:{
         danaBold: 'danaBold',
         danaMedium: 'danaMedium',
@@ -36,9 +43,18 @@ module.exports = {
         'height': 'height',
         'right': 'right',
         'left': 'left',
+      },
+      borderRadius: {
+        'circle': '50%'
       }
-
     },
+    screens: {
+      'xs': '480px',
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+    }
   },
   plugins: [
     function({ addVariant }) {
