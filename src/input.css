@@ -44,3 +44,9 @@
         font-family: "danaRegular";
     }
 }
+
+@layer components{
+    .circle{
+        @apply flex items-center justify-center border rounded-circle;
+    }
+}
