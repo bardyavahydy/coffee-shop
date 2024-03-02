@@ -274,7 +274,7 @@
                         </svg>
                         <span class="hidden xl:inline">حساب کاربری</span>
                     </a>
-                    <ul class="bg-white text-zinc-700 dark:bg-zinc-700 dark:text-white absolute top-[105%] left-0 text-base w-52 px-3.5 py-4 rounded-2xl opacity-0 invisible duration-300 delay-75 group-hover:opacity-100 group-hover:visible grandchild:py-2.5 grandchild:px-2 grandchild:rounded-md hover:grandchild:bg-orange-200/20 hover:grandchild:text-orange-300 hover:grandchild:transition-colors grandchild:duration-300 grandchild:flex grandchild:items-center grandchild:gap-x-2.5">
+                    <ul class="shadow-box bg-white text-zinc-700 dark:bg-zinc-700 dark:text-white absolute top-[105%] left-0 text-base w-52 px-3.5 py-4 rounded-2xl opacity-0 invisible duration-300 delay-75 group-hover:opacity-100 group-hover:visible grandchild:py-2.5 grandchild:px-2 grandchild:rounded-md hover:grandchild:bg-orange-200/20 hover:grandchild:text-orange-300 hover:grandchild:transition-colors grandchild:duration-300 grandchild:flex grandchild:items-center grandchild:gap-x-2.5">
                         <li class="">
                             <a href="#" class="">
                                 <svg class="size-5">
@@ -622,12 +622,12 @@
                     
                     <!-- products -->
                     <div>
-                        <div class="grid grid-cols-auto-fit gap-3.5 md:gap-5 lg:grid-cols-auto-fit-md">
+                        <div class="grid grid-cols-auto-fit gap-3.5 md:gap-5 lg:grid-cols-auto-fit-lg">
                             <!-- product -->
                             <div class="product">
                                 <!-- product img -->
                                 <div class="container-product-img">
-                                    <img src="./public/imgs/products/p1.png" alt="product-img" class="product-img">
+                                    <img src="./public/imgs/products/p1.png" alt="product-img" class="product-img" loading="lazy">
                                 </div>
                                 <!-- off -->
                                 <span class="product-off hidden"></span>
@@ -700,7 +700,7 @@
                             <div class="product">
                                 <!-- product img -->
                                 <div class="container-product-img">
-                                    <img src="./public/imgs/products/p2.png" alt="product-img" class="product-img">
+                                    <img src="./public/imgs/products/p2.png" alt="product-img" class="product-img" loading="lazy">
                                 </div>
                                 <!-- off -->
                                 <span class="product-off hidden"></span>
@@ -773,7 +773,7 @@
                             <div class="product">
                                 <!-- product img -->
                                 <div class="container-product-img">
-                                    <img src="./public/imgs/products/p3.png" alt="product-img" class="product-img">
+                                    <img src="./public/imgs/products/p3.png" alt="product-img" class="product-img" loading="lazy">
                                 </div>
                                 <!-- off -->
                                 <span class="product-off">12%</span>
@@ -846,7 +846,7 @@
                             <div class="product">
                                 <!-- product img -->
                                 <div class="container-product-img">
-                                    <img src="./public/imgs/products/p4.png" alt="product-img" class="product-img">
+                                    <img src="./public/imgs/products/p4.png" alt="product-img" class="product-img" loading="lazy">
                                 </div>
                                 <!-- off -->
                                 <span class="product-off hidden"></span>
@@ -919,7 +919,7 @@
                             <div class="product">
                                 <!-- product img -->
                                 <div class="container-product-img">
-                                    <img src="./public/imgs/products/p5.png" alt="product-img" class="product-img">
+                                    <img src="./public/imgs/products/p5.png" alt="product-img" class="product-img" loading="lazy">
                                 </div>
                                 <!-- off -->
                                 <span class="product-off">12%</span>
@@ -992,7 +992,7 @@
                             <div class="product">
                                 <!-- product img -->
                                 <div class="container-product-img">
-                                    <img src="./public/imgs/products/p6.png" alt="product-img" class="product-img">
+                                    <img src="./public/imgs/products/p6.png" alt="product-img" class="product-img" loading="lazy">
                                 </div>
                                 <!-- off -->
                                 <span class="product-off hidden"></span>
@@ -1065,7 +1065,7 @@
                             <div class="product">
                                 <!-- product img -->
                                 <div class="container-product-img">
-                                    <img src="./public/imgs/products/p7.png" alt="product-img" class="product-img">
+                                    <img src="./public/imgs/products/p7.png" alt="product-img" class="product-img" loading="lazy">
                                 </div>
                                 <!-- off -->
                                 <span class="product-off hidden"></span>
@@ -1138,7 +1138,7 @@
                             <div class="product">
                                 <!-- product img -->
                                 <div class="container-product-img">
-                                    <img src="./public/imgs/products/p8.png" alt="product-img" class="product-img">
+                                    <img src="./public/imgs/products/p8.png" alt="product-img" class="product-img" loading="lazy">
                                 </div>
                                 <!-- off -->
                                 <span class="product-off hidden"></span>
@@ -1213,6 +1213,89 @@
                 </div>
             </div>
 
+        </section>
+
+        <!-- categories-section -->
+        <section class="mt-8 mb-10 md:my-20">
+            <div class="container">
+                <!-- category-banner -->
+                <div class="flex flex-col gap-5 text-white mb-10 child:grow child:relative child:h-[142px] child:rounded-2xl child:overflow-hidden md:flex-row md:mb-20 md:child:h-[248px]">
+                    <!-- types-of-coffee -->
+                    <div>
+                        <!-- banner -->
+                        <div class="size-full">
+                            <img src="./public/imgs/categories/category-right.jpg" alt="category-right" class="size-full object-cover" loading="lazy">
+                        </div>
+
+                        <a href="#" class="bg-gradient-to-l from-black/60 from-[33.85%] to-black/10 to-[100%] absolute inset-0 flex flex-col gap-y-4 justify-center pr-7 child:!leading-6 md:pr-12 md:gap-y-7">
+                            <span class="font-danaBold text-2xl md:text-4xl">انواع قهوه</span>
+                            <span class="text-base md:font-danaMedium md:text-xl">ترکیبی و تک خاستگاه</span>
+                        </a>
+                    </div>
+    
+                    <!-- powders -->
+                    <div>
+                        <!-- banner -->
+                        <div class="size-full">
+                            <img src="./public/imgs/categories/category-left.jpg" alt="category-left" class="size-full object-cover" loading="lazy">
+                        </div>
+
+                        <a href="#" class="bg-gradient-to-l from-black/60 from-[33.85%] to-black/10 to-[100%] absolute inset-0 flex flex-col gap-y-4 justify-center pr-7 child:!leading-6 md:pr-12 md:gap-y-7">
+                            <span class="font-danaBold text-2xl md:text-4xl">پودرهای فوری</span>
+                            <span class="text-base md:font-danaMedium md:text-xl">نسکافه ، هات چاکلت ، ماسالا</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- category-product -->
+                <div class="flex flex-wrap items-center justify-center gap-y-6 gap-x-[27px] child:w-[100px] md:gap-x-16 md:child:w-[200px]">
+                    <div>
+                        <div>
+                            <a href="#">
+                                <img src="./public/imgs/categories/category1.png" alt="category" class="size-full" loading="lazy">
+                            </a>
+                        </div>
+                        <h3 class="font-danaBold text-sm text-center text-zinc-700 dark:text-white min-h-10 mt-1.5 md:text-xl md:mt-2.5">قهوه دمی و اسپرسو</h3>
+                    </div>
+
+                    <div>
+                        <div>
+                            <a href="#">
+                                <img src="./public/imgs/categories/category2.png" alt="category" class="size-full" loading="lazy">
+                            </a>
+                        </div>
+                        <h3 class="font-danaBold text-sm text-center text-zinc-700 dark:text-white min-h-10 mt-1.5 md:text-xl md:mt-2.5">لوازم جانبی و تجهیزات</h3>
+                    </div>
+
+                    <div>
+                        <div>
+                            <a href="#">
+                                <img src="./public/imgs/categories/category3.png" alt="category" class="size-full" loading="lazy">
+                            </a>
+                        </div>
+                        <h3 class="font-danaBold text-sm text-center text-zinc-700 dark:text-white min-h-10 mt-1.5 md:text-xl md:mt-2.5">اسپرسو ساز</h3>
+                    </div>
+
+                    <div>
+                        <div>
+                            <a href="#">
+                                <img src="./public/imgs/categories/category4.png" alt="category" class="size-full" loading="lazy">
+                            </a>
+                        </div>
+                        <h3 class="font-danaBold text-sm text-center text-zinc-700 dark:text-white min-h-10 mt-1.5 md:text-xl md:mt-2.5">پک تستر قهوه</h3>
+                    </div>
+
+                    <div>
+                        <div>
+                            <a href="#">
+                                <img src="./public/imgs/categories/category5.png" alt="category" loading="lazy">
+                            </a>
+                        </div>
+                        <h3 class="font-danaBold text-sm text-center text-zinc-700 dark:text-white min-h-10 mt-1.5 md:text-xl md:mt-2.5">قهوه ترک</h3>
+                    </div>
+
+                </div>
+            </div>
         </section>
     </main>
 
