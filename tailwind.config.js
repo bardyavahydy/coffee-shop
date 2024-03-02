@@ -46,6 +46,10 @@ module.exports = {
       },
       borderRadius: {
         'circle': '50%'
+      },
+      gridTemplateColumns:{
+        'auto-fit-md': 'repeat(auto-fit, minmax(237px, 1fr))',
+        'auto-fit': 'repeat(auto-fit, minmax(190px, 1fr))'
       }
     },
     screens: {
