@@ -11,10 +11,21 @@ const subMenuMobileElm = $.querySelector('.sub-menu-mobile')
 const shoppingCartSvgMobileElm = $.querySelector('.shopping-cart-svg-mobile')
 const shoppingCartMobileElm = $.querySelector('.shopping-cart-mobile')
 const crossShoppingCartMobileElm = $.querySelector('.cross-shopping-cart-mobile')
+const  swiperButtonNextBtn = $.querySelector('.swiper-button-next-custom')
+const  swiperButtonPrevBtn = $.querySelector('.swiper-button-prev-custom')
+const numberOfSlides = $.querySelector('.swiper-wrapper').childElementCount
 
 let theme = null
+let slide = null;
 
 // FUNCTIONS
+
+(() =>{
+    if(window.innerWidth >= 1280) slide = 4
+    else if(window.innerWidth >= 640) slide = 3
+    else if(window.innerWidth >= 426) slide = 2
+    else slide = 1
+})()
 
 const setTheme = () =>{
     if($.documentElement.classList.contains('dark')) setLightTheme()
@@ -78,6 +89,37 @@ const hideMobileMenuOrSoppingCart = (elm, initialCoordinatesX, secondaryCoordina
     settingClassesForMenuOrShoppingCart(elm, initialCoordinatesX, secondaryCoordinatesX)
     setTimeout(() => settingClassesForOverlayElm('opacity-100', 'visible', 'opacity-0','invisible'), 250);
 }
+
+const swiper = new Swiper('.swiper', {
+    direction: 'horizontal',
+    slidesPerView: slide,
+    spaceBetween: 14,
+    autoplay: {
+        pauseOnMouseEnter: true,
+        delay: 2500,
+    },
+    breakpoints: {
+        768: {
+            spaceBetween: 20,
+        },
+    },
+    navigation: {
+        nextEl: '.swiper-button-next-custom',
+        prevEl: '.swiper-button-prev-custom',
+    },
+});
+
+swiper.on('slideChange', function() {
+    let realIndex = swiper.realIndex;
+    if(realIndex == 0) swiperButtonPrevBtn.classList.add('swiper-button-custom-disabled')
+    else swiperButtonPrevBtn.classList.remove('swiper-button-custom-disabled')
+});
+
+swiper.on('slideChange', function() {
+    let realIndex = swiper.realIndex;
+    if(realIndex == (numberOfSlides - slide)) swiperButtonNextBtn.classList.add('swiper-button-custom-disabled')
+    else swiperButtonNextBtn.classList.remove('swiper-button-custom-disabled')
+});
 
 // EVENTS
 
