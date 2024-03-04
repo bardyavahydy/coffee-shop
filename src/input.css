@@ -170,6 +170,17 @@
         @apply size-6 xs:size-4 lg:size-6 ;
     }
 
+    /*  best-products */
+
+    .swiper-button-prev-custom, .swiper-button-next-custom{
+        @apply shadow-box bg-white hover:bg-gray-300 dark:hover:bg-white dark:hover:text-zinc-700 dark:bg-zinc-700 text-zinc-700 dark:text-white flex items-center justify-center size-9 rounded-circle transition-colors duration-300 md:size-11 ;
+    }
+
+    .swiper-button-custom-disabled{
+        @apply opacity-50 cursor-auto pointer-events-none ;
+    }
+
+
     @media (max-width: 768px){
         *{
             cursor: default !important;
