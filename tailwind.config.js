@@ -31,7 +31,8 @@ module.exports = {
         box: '0px 1px 10px rgba(0, 0, 0, 0.05)',
       },
       borderRadius: {
-        '4xl': '2rem'
+        '4xl': '2rem',
+        'circle': '50%'
       },
       size: {
         '8.5': '2.125rem',
@@ -43,9 +44,6 @@ module.exports = {
         'height': 'height',
         'right': 'right',
         'left': 'left',
-      },
-      borderRadius: {
-        'circle': '50%'
       },
       gridTemplateColumns:{
         'auto-fit-lg': 'repeat(auto-fit, minmax(237px, 1fr))',
