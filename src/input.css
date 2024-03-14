@@ -180,10 +180,16 @@
         @apply opacity-50 cursor-auto pointer-events-none ;
     }
 
-
     @media (max-width: 768px){
         *{
             cursor: default !important;
         }
+    }
+}
+
+@layer utilities{
+    .ltr-text{
+        direction: ltr;
+        text-align: left;
     }
 }
