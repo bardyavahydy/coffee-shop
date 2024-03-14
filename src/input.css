@@ -47,11 +47,15 @@
 
 @layer components{
     .header-mobile{
-        @apply fixed -top-16 inset-x-0 z-20 shadow-box bg-white dark:bg-zinc-700 text-zinc-700 dark:text-white py-3 px-4 transition-top duration-300 md:hidden;
+        @apply fixed top-0 inset-x-0 z-20 shadow-box bg-white dark:bg-zinc-700 text-zinc-700 dark:text-white py-3 px-4 transition-top duration-300 md:hidden;
     }
 
-    .header-mobile.show{
+    .header-mobile.show-header-mobile{
         @apply top-0;
+    }
+
+    .header-mobile.hide-header-mobile{
+        @apply -top-16;
     }
 
     .circle{
