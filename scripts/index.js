@@ -11,8 +11,9 @@ const subMenuMobileElm = $.querySelector('.sub-menu-mobile')
 const shoppingCartSvgMobileElm = $.querySelector('.shopping-cart-svg-mobile')
 const shoppingCartMobileElm = $.querySelector('.shopping-cart-mobile')
 const crossShoppingCartMobileElm = $.querySelector('.cross-shopping-cart-mobile')
-const  swiperButtonNextBtn = $.querySelector('.swiper-button-next-custom')
-const  swiperButtonPrevBtn = $.querySelector('.swiper-button-prev-custom')
+const titleOfTheHomeSection = $.querySelector('.arabica-coffee')
+const swiperButtonNextBtn = $.querySelector('.swiper-button-next-custom')
+const swiperButtonPrevBtn = $.querySelector('.swiper-button-prev-custom')
 const numberOfSlides = $.querySelector('.swiper-wrapper').childElementCount
 
 let theme = null
@@ -89,6 +90,22 @@ const hideMobileMenuOrSoppingCart = (elm, initialCoordinatesX, secondaryCoordina
     settingClassesForMenuOrShoppingCart(elm, initialCoordinatesX, secondaryCoordinatesX)
     setTimeout(() => settingClassesForOverlayElm('opacity-100', 'visible', 'opacity-0','invisible'), 250);
 }
+
+// typewriter.js
+
+var typewriter = new Typewriter(titleOfTheHomeSection, {
+    loop: true,
+    delay: 150,
+    deleteSpeed: 150
+  });
+  
+  typewriter
+    .pauseFor(2500)
+    .typeString('قهوه عربیکا تانزانیا')
+    .pauseFor(2500)
+    .start();
+
+// Swiper.js
 
 const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
