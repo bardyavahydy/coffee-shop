@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="fa" dir="rtl" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -712,16 +712,16 @@
                         </div>
 
                         <div>
-                            <div class="hidden absolute right-1/2 translate-x-1/2 -bottom-[11px] md:block">
+                            <div class="hidden absolute right-1/2 translate-x-1/2 -bottom-[11px] z-[1] md:block">
                                 <div class="w-24 h-[22px]">
                                     <div class="absolute bottom-[50%]">
                                         <svg class="text-white xl:text-gray-100 dark:text-zinc-800 w-24 h-[22px]">
                                             <use href="#curve-svg"></use>
                                         </svg>
                                     </div>
-                                    <div class="absolute inset-0 m-auto flex items-center justify-center size-[30px] border-2 rounded-circle border-orange-300">
-                                        <svg class="size-5 text-zinc-700 dark:text-white">
-                                            <use href="#chevron-down-mini-svg"></use>
+                                    <div class="move-down cursor-pointer absolute inset-0 m-auto flex items-center justify-center size-[30px] border-2 rounded-circle border-orange-300">
+                                        <svg class="cursor-pointer size-5 text-zinc-700 dark:text-white">
+                                            <use href="#chevron-down-mini-svg" class="cursor-pointer"></use>
                                         </svg>
                                     </div>
                                 </div>
@@ -743,7 +743,7 @@
                     <!-- title section -->
                     <div class="flex items-end justify-between mb-5 md:mb-12">
                         <div>
-                            <h2 class="title-section">جدیدترین محصولات</h2>
+                            <h2 class="title-section latest-products">جدیدترین محصولات</h2>
                             <p class="subtitle-section">فرآوری شده از دانه قهوه</p>
                         </div>
         
@@ -2331,8 +2331,8 @@
                             <use href="#curve-svg"></use>
                         </svg>
                     </div>
-                    <div class="absolute inset-0 m-auto flex items-center justify-center size-[30px] border-2 rounded-circle border-orange-300">
-                        <svg class="size-5 text-zinc-700 dark:text-white">
+                    <div class="move-up cursor-pointer absolute inset-0 m-auto flex items-center justify-center size-[30px] border-2 rounded-circle border-orange-300">
+                        <svg class="cursor-pointer size-5 text-zinc-700 dark:text-white">
                             <use href="#chevron-down-mini-svg"></use>
                         </svg>
                     </div>
