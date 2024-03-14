@@ -48,7 +48,13 @@ module.exports = {
       gridTemplateColumns:{
         'auto-fit-lg': 'repeat(auto-fit, minmax(237px, 1fr))',
         'auto-fit': 'repeat(auto-fit, minmax(190px, 1fr))'
-      }
+      },
+      lineHeight:{
+        '12': '3rem'
+      },
+      spacing: {
+        '4.5': '1.125rem',
+      }  
     },
     screens: {
       'xs': '480px',
