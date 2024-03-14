@@ -12,9 +12,12 @@ const shoppingCartSvgMobileElm = $.querySelector('.shopping-cart-svg-mobile')
 const shoppingCartMobileElm = $.querySelector('.shopping-cart-mobile')
 const crossShoppingCartMobileElm = $.querySelector('.cross-shopping-cart-mobile')
 const titleOfTheHomeSection = $.querySelector('.arabica-coffee')
+const moveDownElm = $.querySelector('.move-down')
+const latestProductsElm = $.querySelector('.latest-products')
 const swiperButtonNextBtn = $.querySelector('.swiper-button-next-custom')
 const swiperButtonPrevBtn = $.querySelector('.swiper-button-prev-custom')
 const numberOfSlides = $.querySelector('.swiper-wrapper').childElementCount
+const moveUpElm = $.querySelector('.move-up')
 
 let theme = null
 let slide = null;
@@ -91,6 +94,13 @@ const hideMobileMenuOrSoppingCart = (elm, initialCoordinatesX, secondaryCoordina
     setTimeout(() => settingClassesForOverlayElm('opacity-100', 'visible', 'opacity-0','invisible'), 250);
 }
 
+const moveDownHandler = () => {
+    let latestProductsElmPos = latestProductsElm.getBoundingClientRect()
+    window.scrollTo(0 , (latestProductsElmPos.top + $.documentElement.scrollTop))
+}
+
+const moveUpHandler = () => window.scrollTo(0 , 0)
+
 // typewriter.js
 
 var typewriter = new Typewriter(titleOfTheHomeSection, {
@@ -160,6 +170,10 @@ storeChevronBtnElm.addEventListener('click', (event) =>{
     storeChevronSvgElm.classList.toggle('rotate-180')
     setHeightForSubMenuInMobile(event.currentTarget)
 })
+
+moveDownElm.addEventListener('click', moveDownHandler)
+
+moveUpElm.addEventListener('click', moveUpHandler)
 
 window.addEventListener('load', () =>{
     if(!localStorage.theme || localStorage.theme === 'light') setLightTheme()
