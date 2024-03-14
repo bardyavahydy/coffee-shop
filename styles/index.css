@@ -1334,6 +1334,10 @@ html.dark .product-bg{
   z-index: 20;
 }
 
+.z-\[1\] {
+  z-index: 1;
+}
+
 .float-start {
   float: inline-start;
 }
@@ -5037,14 +5041,6 @@ html.dark .product-bg{
 
   .md\:w-\[296px\] {
     width: 296px;
-  }
-
-  .md\:max-w-\[462px\] {
-    max-width: 462px;
-  }
-
-  .md\:max-w-\[480px\] {
-    max-width: 480px;
   }
 
   .md\:max-w-\[490px\] {
