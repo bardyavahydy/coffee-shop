@@ -3466,11 +3466,6 @@ html.dark .product-bg{
   padding-bottom: 2rem;
 }
 
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
 .pb-2 {
   padding-bottom: 0.5rem;
 }
@@ -5046,6 +5041,14 @@ html.dark .product-bg{
 
   .md\:max-w-\[462px\] {
     max-width: 462px;
+  }
+
+  .md\:max-w-\[480px\] {
+    max-width: 480px;
+  }
+
+  .md\:max-w-\[490px\] {
+    max-width: 490px;
   }
 
   .md\:flex-row {
