@@ -115,6 +115,10 @@ var typewriter = new Typewriter(titleOfTheHomeSection, {
     .pauseFor(2500)
     .start();
 
+// AOS.js
+
+AOS.init()
+
 // Swiper.js
 
 const swiper = new Swiper('.swiper', {
