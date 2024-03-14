@@ -66,10 +66,16 @@ const SaveTheThemeToLocalStorage = (data) => localStorage.setItem('theme', data)
 
 const settingTopPosForHeaderMobileElm = () =>{
     if(verticalCoordinatesScroll > window.scrollY) {
-        if(!headerMobileElm.classList.contains('show')) headerMobileElm.classList.add('show')
+        if(!headerMobileElm.classList.contains('show-header-mobile')) {
+            headerMobileElm.classList.add('show-header-mobile')
+            headerMobileElm.classList.remove('hide-header-mobile')
+        }
     }
     else {
-        if(headerMobileElm.classList.contains('show')) headerMobileElm.classList.remove('show')
+        if(headerMobileElm.classList.contains('show-header-mobile')) {
+            headerMobileElm.classList.add('hide-header-mobile')
+            headerMobileElm.classList.remove('show-header-mobile')
+        }
     }
     verticalCoordinatesScroll = window.scrollY
 }
