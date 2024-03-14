@@ -1,6 +1,7 @@
 const $ = document
 const themeBtnElms = $.querySelectorAll('.theme-btn')
 const themeSvgElm = themeBtnElms[0].querySelector('svg')
+const headerMobileElm = $.querySelector('.header-mobile')
 const menuHamburgerElm = $.querySelector('.menu-hamburger')
 const overlayElm = $.querySelector('.overlay')
 const mobileMenuElm = $.querySelector('.mobile-menu')
@@ -20,7 +21,8 @@ const numberOfSlides = $.querySelector('.swiper-wrapper').childElementCount
 const moveUpElm = $.querySelector('.move-up')
 
 let theme = null
-let slide = null;
+let slide = null
+let verticalCoordinatesScroll = 0;
 
 // FUNCTIONS
 
@@ -61,6 +63,16 @@ const setDarkTheme = () =>{
 }
 
 const SaveTheThemeToLocalStorage = (data) => localStorage.setItem('theme', data)
+
+const settingTopPosForHeaderMobileElm = () =>{
+    if(verticalCoordinatesScroll > window.scrollY) {
+        if(!headerMobileElm.classList.contains('show')) headerMobileElm.classList.add('show')
+    }
+    else {
+        if(headerMobileElm.classList.contains('show')) headerMobileElm.classList.remove('show')
+    }
+    verticalCoordinatesScroll = window.scrollY
+}
 
 const setHeightForSubMenuInMobile = (target) =>{
     let parentElm = target.parentNode 
@@ -182,4 +194,8 @@ moveUpElm.addEventListener('click', moveUpHandler)
 window.addEventListener('load', () =>{
     if(!localStorage.theme || localStorage.theme === 'light') setLightTheme()
     else setDarkTheme()
+})
+
+window.addEventListener('scroll', () =>{
+    settingTopPosForHeaderMobileElm()
 })
