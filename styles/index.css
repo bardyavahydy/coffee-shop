@@ -652,7 +652,7 @@ body{
   position: fixed;
   left: 0px;
   right: 0px;
-  top: -4rem;
+  top: 0px;
   z-index: 20;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -683,8 +683,12 @@ body{
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.header-mobile.show {
+.header-mobile.show-header-mobile {
   top: 0px;
+}
+
+.header-mobile.hide-header-mobile {
+  top: -4rem;
 }
 
 .circle {
