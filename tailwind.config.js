@@ -44,6 +44,7 @@ module.exports = {
         'height': 'height',
         'right': 'right',
         'left': 'left',
+        'top': 'top',
       },
       gridTemplateColumns:{
         'auto-fit-lg': 'repeat(auto-fit, minmax(237px, 1fr))',
