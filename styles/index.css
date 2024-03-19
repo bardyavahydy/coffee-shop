@@ -700,7 +700,7 @@ body{
 }
 
 .product-bg{
-  background: linear-gradient(rgb(243 244 246 / 0.65), rgb(243 244 246 / 0.65)), url('/public/imgs/body-bg.png') top/100% no-repeat;
+  background: linear-gradient(rgb(243 244 246 / 0.65), rgb(243 244 246 / 0.65)), url('../public/imgs/body-bg.png') top/100% no-repeat;
   position: absolute;
   inset: -40px 0 0;
   z-index: -1;
@@ -3248,8 +3248,8 @@ html.dark .product-bg{
   background-color: rgb(63 63 70 / var(--tw-bg-opacity));
 }
 
-.bg-\[url\(\'\/public\/imgs\/headerBgMobile\.webp\'\)\] {
-  background-image: url('/public/imgs/headerBgMobile.webp');
+.bg-\[url\(\'\.\.\/public\/imgs\/headerBgMobile\.webp\'\)\] {
+  background-image: url('../public/imgs/headerBgMobile.webp');
 }
 
 .bg-gradient-to-b {
@@ -5155,8 +5155,8 @@ html.dark .product-bg{
     border-width: 2px;
   }
 
-  .md\:bg-\[url\(\'\/public\/imgs\/headerBgDesktop\.png\'\)\] {
-    background-image: url('/public/imgs/headerBgDesktop.png');
+  .md\:bg-\[url\(\'\.\.\/public\/imgs\/headerBgDesktop\.png\'\)\] {
+    background-image: url('../public/imgs/headerBgDesktop.png');
   }
 
   .md\:px-8 {
