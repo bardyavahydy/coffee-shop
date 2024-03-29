@@ -715,7 +715,7 @@ body{
 }
 
 html.dark .product-bg{
-  background: url('/public/imgs/body-bg.png') top/100% no-repeat;
+  background: url('../public/imgs/body-bg.png') top/100% no-repeat;
 }
 
 .title-section {
